@@ -7,8 +7,8 @@ public class Insertion implements SortAlgorithm{
     public void sort(Comparable[] dataset) {
         for(int i = 1; i < dataset.length - 1; i ++) {
             for (int j = i; j > 0;j --) {
-                if (greater(dataset[j-1], dataset[i])) {
-                    exch(dataset, j - 1, i);
+                if (greater(dataset[j-1], dataset[j])) {
+                    exch(dataset, j - 1, j);
                 }else {
                     break;
                 }
@@ -30,7 +30,7 @@ public class Insertion implements SortAlgorithm{
 
     public static void main(String[] args) {
         Integer[] testset = {2, 6, 10, 12, 5, 20, 1, 52};
-        new Bubble().sort(testset);
+        new Insertion().sort(testset);
         System.out.println(Arrays.toString(testset));
     }
 }

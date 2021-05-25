@@ -28,7 +28,7 @@ public class Select implements SortAlgorithm {
 
     public static void main(String[] args) {
         Integer[] testset = {4, 6, 10, 12, 5, 20, 1, 50};
-        new Bubble().sort(testset);
+        new Select().sort(testset);
         System.out.println(Arrays.toString(testset));
     }
 }
